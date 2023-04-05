@@ -14,16 +14,17 @@ const questions = [
             }
             else{
                 console.log('Please enter the title of your project.');
-                return false:
+                return false;
 
             }    
             }
         },
 
         {
-        type: 'input'
-        name: 'Add a description for your project',
+        type: 'input',
         name: 'description',
+        name: 'Add a description for your project',
+       
         validate: (descriptionInput) => {
           if (descriptionInput) {
             return true;
@@ -84,7 +85,8 @@ const questions = [
             console.log('Tell us how to test your application.');
             return false;
           }
-        },
+        }
+      },
 
         {
             type: 'input',
@@ -98,7 +100,8 @@ const questions = [
                     return false;
                 }
             }
-        },{
+        },
+        {
             type: 'input',
             message: 'What is your GitHub username?',
             name: 'Git',
@@ -124,7 +127,6 @@ const questions = [
           }
 
 
-    }
 ];
 
 // This function is used to write README file
@@ -135,7 +137,7 @@ function writeToFile(fileName, data) {
         } else {
             console.log('Successfully created READMe.md!')
         }
-    }):
+    });
 }
 
 // This function will  initialize  the app
