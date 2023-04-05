@@ -1,6 +1,6 @@
 # README Generator
 ## Description
-undefined
+My project is a backend application that used Node.js to generate a professional README file
 ## Table of Contents
 - [Title](#title)
 - [Description](#description)
@@ -14,7 +14,7 @@ Gitbash, VSCode, Node.js
 ## Usage
 After all required technologies habve been installed, run the following code: ‘node inex.js’ in the terminal. Answer all questions as they appear. Once all questions have been answered a README.md file will be generated and will appear in the working directory.
 ## Tests
-run 'node index.js' command in the terminal.
+To test this application you will need to  run 'node index.js' command in the terminal.
 ## Contributing
 Adina Hidan
 ## Questions

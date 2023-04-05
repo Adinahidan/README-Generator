@@ -24,8 +24,8 @@ const questions = [
 
         {
         type: 'input',
+        message: 'Add a description for your project',
         name: 'description',
-        name: 'Add a description for your project',
        
         validate: (descriptionInput) => {
           if (descriptionInput) {
