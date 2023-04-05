@@ -1,12 +1,14 @@
 //  List packages needed for this application
-const iquirer =require('inquirer');
-const generateMarkdown = require('.utils/generateMarkdown.js');
+const inquirer = require('inquirer');
+const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 //  Array of questions for user input
 const questions = [
     {
         type: 'input',
         name: 'title',
+
         message:'What is the title fo your project?',
         validate: titleInput =>{
             if (titleInput) {
@@ -106,7 +108,7 @@ const questions = [
             message: 'What is your GitHub username?',
             name: 'GitUserName',
             validate: (GitUserNameInput) => {
-              if (GitHubInput) {
+              if (GitUserNameInput) {
                  return true 
                 } else { console.log('Enter your GitHub username.');
                 return false;
@@ -130,15 +132,17 @@ const questions = [
 ];
 
 // This function is used to write README file
-function writeToFile(fileName, data) {
-    fs.writeToFile(fileName, data, (err) => {
-      if (err) {
-        console.log(err);  
-        } else {
-            console.log('Successfully created READMe.md!')
+ function writeToFile(fileName, data) {
+  fs.writeFile(fileName, data, (err) => {
+     if (err) {
+       console.log(err);  
+       } else {
+           console.log("Successfully created READMe.md!");
         }
     });
 }
+
+
 
 // This function will  initialize  the app
 function init() {
